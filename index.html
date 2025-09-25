@@ -90,12 +90,29 @@
       font-weight: bold;
     }
     #search{
-    width: 450px;
+    width: 100%;
+    max-width: 400px;
     height: 25px;
      margin-left: 320px;
      border: 1px solid black;
      border-radius: 20px;
+     box-sizing: border-box;
+      margin-top: -10px;
+      pading: 8px;
+      
      }
+    .tablecont{
+      overflow-x: auto;
+      width: 100%;
+      box-sizing: border-box;
+      pading: 0 10px;
+      
+    }
+    @media (max-width: 600px){
+      table{
+        font-size: 12px;
+      }
+    }
      .fa-solid{
       position: absolute;
       margin-left: 300px;
@@ -111,7 +128,7 @@
 </head>
 <body>
   <div class="container">
-    <i class="fa-solid fa-magnifying-glass"></i><input type="text" id="search" placeholder="Search by name.....">
+    <i class="fa-solid fa-magnifying-glass"></i><div class="tablecont"><input type="text" id="search" placeholder="Search by name....."></div>
     <header class="head"><img src="img/student.preview.png">
     <h1>📊 Student Marks Report</h1>
     <table id="studenttable">
@@ -130,3 +147,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
